@@ -1,0 +1,56 @@
+local UwU = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local Notification = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+UwU.Name = "UwU"
+UwU.Parent = game.CoreGui
+
+frame.Name = "frame"
+frame.Parent = UwU
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.Position = UDim2.new(0.878470063, 0, 0.859085321, 0)
+frame.Size = UDim2.new(0, 222, 0, 89)
+
+Notification.Name = "Notification"
+Notification.Parent = frame
+Notification.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Notification.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Notification.Position = UDim2.new(0.138764411, 0, 0.0898876339, 0)
+Notification.Size = UDim2.new(0, 144, 0, 29)
+Notification.Font = Enum.Font.SourceSans
+Notification.Text = "RespectiveFiltering = false"
+Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+Notification.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = frame
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Close.Position = UDim2.new(0.295857906, 0, 0.408592224, 0)
+Close.Size = UDim2.new(0, 82, 0, 35)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 0, 4)
+Close.TextSize = 14.000
+
+UICorner.Parent = Close
+
+UICorner_2.CornerRadius = UDim.new(0, 30)
+UICorner_2.Parent = frame
+
+-- Scripts:
+
+local function KEARQTS_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	local frame = script.Parent.Parent
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		frame.Visible = false
+	end)
+end
+coroutine.wrap(KEARQTS_fake_script)()
