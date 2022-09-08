@@ -1,6 +1,6 @@
 print(game:GetService("SoundService").RespectFilteringEnabled)
 
-
+wait(4)
 
 if game:GetService("SoundService").RespectFilteringEnabled == false then
 loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/TheDudeOnCrack/filtering-script-thing/main/gui")))()
